@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDotNetCore.ConsoleApp", "LemonDotNetCore.ConsoleApp\LemonDotNetCore.ConsoleApp.csproj", "{71750D6E-6869-42EF-8969-6AEEB7EBB71B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71750D6E-6869-42EF-8969-6AEEB7EBB71B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71750D6E-6869-42EF-8969-6AEEB7EBB71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71750D6E-6869-42EF-8969-6AEEB7EBB71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71750D6E-6869-42EF-8969-6AEEB7EBB71B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DEB12DA-5219-419E-BB85-569C72B03CF4}
+	EndGlobalSection
+EndGlobal
