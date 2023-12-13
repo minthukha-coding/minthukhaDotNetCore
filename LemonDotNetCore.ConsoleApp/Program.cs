@@ -1,38 +1,50 @@
-﻿using System.Data;
+﻿using LemonDotNetCore.ConsoleApp.AdoDotNetExamples;
+using System.Data;
 using System.Data.SqlClient;
 
-Console.WriteLine("Hello, World!");
+//console.writeline("hello, world!");
 
-//SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder();
-//sqlConnectionStringBuilde.DataSource = ".";
-//sqlConnectionStringBuilder.InitialCatalog = "LemonDotNetCore";
-//sqlConnectionStringBuilder.UserID = "sa";
-//sqlConnectionStringBuilder.Password = "sasasu";
+////sqlconnectionstringbuilder sqlconnectionstringbuilder = new sqlconnectionstringbuilder();
+////sqlconnectionstringbuilde.datasource = ".";
+////sqlconnectionstringbuilder.initialcatalog = "lemondotnetcore";
+////sqlconnectionstringbuilder.userid = "sa";
+////sqlconnectionstringbuilder.password = "sasasu";
 
-SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
-{
-    DataSource = ".",
-    InitialCatalog = "LemonDotNetCore",
-    UserID = "sa",
-    Password = "sasasu"
-};
-SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+//sqlconnectionstringbuilder sqlconnectionstringbuilder = new sqlconnectionstringbuilder()
+//{
+//    datasource = ".",
+//    initialcatalog = "lemondotnetcore",
+//    userid = "sa", 
+//    password = "sasasu"
+//};
+//sqlconnection connection = new sqlconnection(sqlconnectionstringbuilder.connectionstring);
 
-connection.Open();
-Console.WriteLine("Connection is opened");
+//connection.open();
+//console.writeline("connection is opened");
 
-string query = @"SELECT [Blog_Id]
-      ,[Blog_Title]
-      ,[Blog_Author]
-      ,[Blog_Content]
-  FROM [dbo].[Tbl_Blog]";
+//string query = @"select [blog_id]
+//      ,[blog_title]
+//      ,[blog_author]
+//      ,[blog_content]
+//  from [dbo].[tbl_blog]";
 
-SqlCommand command = new SqlCommand(query, connection);
-SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
-DataTable dt = new DataTable();
-sqlDataAdapter.Fill(dt);
+//sqlcommand command = new sqlcommand(query, connection);
+//sqldataadapter sqldataadapter = new sqldataadapter(command);
+//datatable dt = new datatable();
+//sqldataadapter.fill(dt);
 
-connection.Close();
-Console.WriteLine("Connection is closed");
+//connection.close();
+//console.writeline("connection is closed");
+
+//foreach (datarow dr in dt.rows)
+//{
+//    console.writeline("id => " + dr["blog_id"]);
+//    console.writeline($"title => {dr["blog_title"]}");
+//    console.writeline("author => " + dr["blog_author"]);
+//    console.writeline("content => " + dr["blog_content"]);
+//}
+
+AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+adoDotNetExample.Run();
 
 Console.ReadKey();
