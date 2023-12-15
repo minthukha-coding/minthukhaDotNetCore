@@ -13,10 +13,10 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
     {
         public void Run()
         {
-            //Read();
+            Read();
             //Edit(1);
             //Edit(12);
-            Delete(1);
+            //Delete(1);
            // Update(1, "hello title", "hello author", "hello content");
 
         }
