@@ -1,4 +1,5 @@
 ﻿using LemonDotNetCore.ConsoleApp.AdoDotNetExamples;
+using LemonDotNetCore.ConsoleApp.DapperPractice;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -44,7 +45,10 @@ using System.Data.SqlClient;
 //    console.writeline("content => " + dr["blog_content"]);
 //}
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-adoDotNetExample.Run();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//adoDotNetExample.Run();
+
+DapperPractices deper = new DapperPractices();
+deper.Run();
 
 Console.ReadKey();
