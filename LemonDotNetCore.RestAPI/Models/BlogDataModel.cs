@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.ConsoleApp.Models
+namespace LemonDotNetCore.RestAPI.Models
 {
     [Table("Tbl_blog")]
     public class BlogDataModel

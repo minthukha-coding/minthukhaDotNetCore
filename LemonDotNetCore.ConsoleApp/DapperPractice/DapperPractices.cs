@@ -39,8 +39,8 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
       ,[Blog_Content]
   FROM [dbo].[Tbl_Blog]";
             using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
-            List<BlogDataModels> lst = db.Query<BlogDataModels>(query).ToList();
-            foreach (BlogDataModels item in lst)
+            List<BlogDataModel> lst = db.Query<BlogDataModel>(query).ToList();
+            foreach (BlogDataModel item in lst)
             {
                 Console.WriteLine(item.Blog_Id);
                 Console.WriteLine(item.Blog_Title);
@@ -56,7 +56,7 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
       ,[Blog_Content]
   FROM [dbo].[Tbl_Blog] where Blog_Id = @Blog_Id";
             using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
-            BlogDataModels? item = db.Query<BlogDataModels>(query,new BlogDataModels {Blog_Id = id }).FirstOrDefault();
+            BlogDataModel? item = db.Query<BlogDataModel>(query,new BlogDataModel {Blog_Id = id }).FirstOrDefault();
             if ( item is null )
             {
                 Console.WriteLine("No data is not found");
@@ -87,7 +87,7 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
            ,@Blog_Author
            ,@Blog_Content)";
 
-            BlogDataModels blog = new BlogDataModels()
+            BlogDataModel blog = new BlogDataModel()
             {
                 Blog_Title = title,
                 Blog_Author = author,
@@ -118,7 +118,7 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
       ,[Blog_Content] = @Blog_Content
  WHERE Blog_Id = @Blog_Id";
 
-            BlogDataModels blog = new BlogDataModels()
+            BlogDataModel blog = new BlogDataModel()
             {
                 Blog_Id = Id,
                 Blog_Title = title,
@@ -147,7 +147,7 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
       WHERE Blog_Id = @Blog_Id";
 
-            BlogDataModels blog = new BlogDataModels()
+            BlogDataModel blog = new BlogDataModel()
             {
                 Blog_Id = Id,
             };
