@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LemonDotNetCore.RestAPI.Models
 {
-    [Table("Tbl_blog")]
+    [Table("Tbl_Blog")]
     public class BlogDataModel
     {
         [Key]
