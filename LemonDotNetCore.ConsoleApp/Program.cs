@@ -1,6 +1,8 @@
 ﻿using LemonDotNetCore.ConsoleApp.AdoDotNetExamples;
 using LemonDotNetCore.ConsoleApp.DapperPractice;
 using LemonDotNetCore.ConsoleApp.EFCoreExamples;
+using LemonDotNetCore.ConsoleApp.HttpClientExamples;
+using LemonDotNetCore.ConsoleApp.RestClientExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -46,13 +48,19 @@ using System.Data.SqlClient;
 //    console.writeline("content => " + dr["blog_content"]);
 //}
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-adoDotNetExample.Run();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//adoDotNetExample.Run();
 
 //DapperPractices deper = new DapperPractices();
 //deper.Run();
 
 //EFCoreExample efcor = new EFCoreExample();
 //efcor.Run();
+
+//HttpClientExample httpClientExample = new HttpClientExample();
+//await httpClientExample.Run();
+
+RestClientExample restClientExample = new RestClientExample();
+await restClientExample.Run();
 
 Console.ReadKey();

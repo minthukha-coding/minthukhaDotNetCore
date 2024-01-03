@@ -100,7 +100,7 @@ namespace LemonDotNetCore.RestAPI.Controllers
             _dbContext.Blogs.Remove(item);
             int result = _dbContext.SaveChanges();
             string message = result > 0 ? "Delete successful" : "Delete failed";
-            return Ok("delete");
+            return Ok(message);
         }
     }
 }
