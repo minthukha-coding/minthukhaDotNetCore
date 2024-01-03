@@ -1,0 +1,83 @@
+[33mcommit 083565da22882f68a4b7619c52d77bf781edf3be[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/test[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mtest[m[33m)[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Wed Jan 3 12:10:21 2024 +0630
+
+    Complete HttpClient & RestClient ( CRUD )
+
+[33mcommit 784b9441f1a33b421e267ff2b1367e5d1f12f6fb[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Wed Dec 27 16:45:44 2023 +0630
+
+    Complete EfCore ConsoleAPP CRUD
+
+[33mcommit 79e6e7369bc28062dae29cf07a665b5aeaef967b[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Wed Dec 27 16:25:27 2023 +0630
+
+    Complete adoDotNet RestAPI CRUD
+
+[33mcommit 28a1c3b78ac673d928cefac08d766d3dc0ff8314[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Tue Dec 26 11:14:39 2023 +0630
+
+    Complete REST API Dapper( CRUD )
+
+[33mcommit e344431302b87a986dbc1d93eb0bcb76e926f42b[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Sat Dec 23 21:16:15 2023 +0630
+
+    Complete RestAPI CRUD
+
+[33mcommit 2a77a172336d853298eb429a1c54b779ef1bee5f[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Sat Dec 23 00:15:30 2023 +0630
+
+    Complete REST API Create Delete Read
+
+[33mcommit 35adaf349e2d22833a718d8e0ec080af7a0b553d[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Tue Dec 19 23:31:50 2023 +0630
+
+    Complete RestAPI Read
+
+[33mcommit dd6ed3442beede8f5f1bdeae235478d48bbae865[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Sat Dec 16 02:21:14 2023 +0630
+
+    Complete Dapper CRUD
+
+[33mcommit dca0d45f09d4344aefc1d94446935bf0feecbafc[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Fri Dec 15 20:25:51 2023 +0630
+
+    Complete Dapper ( Read )
+
+[33mcommit c29594ef3472c6d62bffa4d8d4c36826fd299699[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Thu Dec 14 01:47:05 2023 +0630
+
+    Complete AdoDotNet CRUD
+
+[33mcommit 4059b0d44b88ffb0222ef707d437838703c4ee8f[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Wed Dec 13 19:33:56 2023 +0630
+
+    adoDotNet Read & Edit complete
+
+[33mcommit 8457839bc8e10057c3f41aaddf41e34ce026a06f[m
+Author: minthukha-coding <minthukha1239788@gmail.com>
+Date:   Wed Dec 13 19:32:08 2023 +0630
+
+    Complete ado.net  read and edit
+
+[33mcommit a4aa8198c4a911f5e9fc5fe34a0a3884b74316e3[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: User <User@DESKTOP-JFDF37H>
+Date:   Tue Dec 12 02:36:00 2023 +0630
+
+    Add project files.
+
+[33mcommit 09f74d036e7edbc4e796e654ca6ed914076293fe[m
+Author: User <User@DESKTOP-JFDF37H>
+Date:   Tue Dec 12 02:35:58 2023 +0630
+
+    Add .gitattributes and .gitignore.
