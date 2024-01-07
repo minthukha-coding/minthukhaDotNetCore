@@ -77,7 +77,7 @@ public class cardHolder
             Console.WriteLine("How much woudl you like to withdrawal?");
             double withdrawal = Double.Parse(Console.ReadLine());
 
-            if (curentUser.getBlance() > withdrawal)
+            if (curentUser.getBlance() < withdrawal)
             {
                 Console.WriteLine("Balance is not enough for withdrawal....!");
             }
@@ -102,6 +102,7 @@ public class cardHolder
 
         Console.WriteLine("Welcome to ATM");
         Console.WriteLine("Please insert your debit card no. :");
+
         string debitCardNum = "";
         cardHolder currnetUser;
 
@@ -124,17 +125,25 @@ public class cardHolder
 
         Console.WriteLine("Please enter your pin:");
         int usesrPin = 0;
+        int maxAttempts = 3;
+        int incorrectAttempts = 0;
+
         while (true)
         {
             try
             {
                 usesrPin = int.Parse(Console.ReadLine());
                 if (currnetUser.getPin() == usesrPin) { break; }
-                else { Console.WriteLine("Wrong pin.Please try again!"); }
+                incorrectAttempts++;
+                Console.WriteLine($"Wrong pin. {maxAttempts - incorrectAttempts} attempts remaining. Please try again!");
             }
             catch
             {
-                Console.WriteLine("Wrong pin.Please try again!");
+                Console.WriteLine("Invalid input. Please enter a numeric pin.");
+            }
+            if (incorrectAttempts == maxAttempts)
+            {
+                Console.WriteLine("Too many incorrect attempts. Your account is locked.");
             }
         }
 
