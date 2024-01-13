@@ -21,11 +21,8 @@ function createData() {
     Name: name,
   };
   lst.push(data);
-  console.log({ lst });
   localStorage.setItem(tblName, JSON.stringify(lst));
-  // alert("Saving Successful.");
-
-  alert("Create Successful.");
+  successMessage("Create Successful");
 
   $("#txtName").val("");
   $("#txtName").focus();
@@ -75,41 +72,38 @@ function editData(id) {
   var item = results[0];
   _editId = item.Id;
   $("#txtName").val(item.Name);
-  console.log(_editId);
 }
 
 function updateData() {
   let lst = [];
   if (localStorage.getItem(tblName) != null) {
     lst = JSON.parse(localStorage.getItem(tblName));
-    console.log({ lst });
   }
 
   let index = lst.findIndex((x) => x.Id == _editId);
   lst[index].Name = $("#txtName").val();
 
-  console.log({ lst });
   localStorage.setItem(tblName, JSON.stringify(lst));
-  alert("Updating Successful.");
-  $("#txtName").val('');
+  successMessage("Updating Successful");
+  $("#txtName").val("");
   $("#txtName").focus();
   _editId = null;
   readData();
 }
 
 function deleteData(id) {
-  let result = confirm('Are you sure want to delete?');
-  if (!result) return;
+  confirmMessage("Are you sure want to delete?").then(function (result) {
+    if(!result) return;
     let lst = [];
     if (localStorage.getItem(tblName) != null) {
       lst = JSON.parse(localStorage.getItem(tblName));
     }
-
     lst = lst.filter((x) => x.Id != id);
     localStorage.setItem(tblName, JSON.stringify(lst));
-    alert("Deleting Successful.");
+    successMessage("Deleting Successful");
     readData();
-  };
+  });
+}
 
 function uuidv4() {
   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) =>
