@@ -22,8 +22,8 @@ function createData() {
   localStorage.setItem(tblName, JSON.stringify(lst));
 }
 
-function read(){
-    if ( localStorage.getItem(tblName) == null) return;
+function readData() {
+  if (localStorage.getItem(tblName) == null) return;
 
     var jsonStr = localStorage.getItem(tblName);
     var lst = JSON.parse(jsonStr);
