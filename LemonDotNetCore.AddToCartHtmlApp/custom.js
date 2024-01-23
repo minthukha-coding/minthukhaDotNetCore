@@ -7,17 +7,16 @@ function sucessMessage(message) {
         timer: 1500
       });
 }
-
-function comfirmMessage(message){
+function confirmMessage(message) {
     return new Promise(function (myResolve, myReject) {
-        Swal.fire({
-            title: "Confirm",
-            text: message,
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonText: "Yes"
-        }).then((result) => {
-            myResolve(result.isConfirmed);
-        });
+      Swal.fire({
+        title: "Confirm",
+        text: message,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes"
+      }).then((result) => {
+        myResolve(result.isConfirmed);
+      });
     });
-}
+  }

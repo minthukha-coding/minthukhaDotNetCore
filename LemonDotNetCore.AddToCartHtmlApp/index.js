@@ -117,26 +117,50 @@ $(document).ready(function () {
     let positionItemInCart = cart.findIndex(
       (value) => value.product_id == product_id
     );
+
     if (positionItemInCart >= 0) {
       let info = cart[positionItemInCart];
       switch (type) {
         case "plus":
-          cart[positionItemInCart].quantity =
-            cart[positionItemInCart].quantity + 1;
+          confirmMessage(
+            "Are you sure want to increase product quantity?"
+          ).then(function (result) {
+            if (result) {
+              cart[positionItemInCart].quantity =
+                cart[positionItemInCart].quantity + 1;
+              console.log(cart[positionItemInCart]);
+              addCartToHTML();
+              addCartToMemory();
+            }
+          });
           break;
 
         default:
           let changeQuantity = cart[positionItemInCart].quantity - 1;
           if (changeQuantity > 0) {
-            cart[positionItemInCart].quantity = changeQuantity;
+            confirmMessage("Are you sure want to decrease the quantity?").then(
+              function (result) {
+                if (result) {
+                  cart[positionItemInCart].quantity = changeQuantity;
+                  addCartToHTML();
+                  addCartToMemory();
+                }
+              }
+            );
           } else {
-            cart.splice(positionItemInCart, 1);
+            confirmMessage(
+              "Are you sure want to remove this item from the cart?"
+            ).then(function (result) {
+              if (result) {
+                cart.splice(positionItemInCart, 1);
+                addCartToHTML();
+                addCartToMemory();
+              }
+            });
           }
           break;
       }
     }
-    addCartToHTML();
-    addCartToMemory();
   };
 
   const initApp = () => {
