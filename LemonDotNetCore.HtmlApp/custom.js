@@ -1,5 +1,5 @@
 function successMessage(message) {
-  //sweetalert
+  // sweetalert
   // Swal.fire({
   //     title: "Success",
   //     text: message,
