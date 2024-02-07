@@ -3,6 +3,8 @@
     ViewData["Title"] = "Blog";
     int count = 0;
 }
+
+<a href="/Blog/Create" class="btn btn-success">New Blog</a>
 <table class="table">
     <thead>
         <tr>
@@ -17,6 +19,10 @@
         {
             <tr>
                 <th scope="row">@(++count)</th>
+                <td>
+                    <a href="/Blog/Edit/@item.Blog_Id" class="btn btn-warning">Edit</a>
+                    <a href="/Blog/Delete/@item.Blog_Id" class="btn btn-danger">Delete</a>
+                </td>
                 <td>@item.Blog_Title</td>
                 <td>@item.Blog_Author</td>
                 <td>@item.Blog_Content</td>
