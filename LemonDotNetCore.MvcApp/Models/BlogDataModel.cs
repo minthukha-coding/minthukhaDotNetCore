@@ -12,4 +12,9 @@ namespace LemonDotNetCore.MvcApp.Models
         public string? Blog_Author { get; set; }
         public string? Blog_Content { get; set; }
     }
+    public class MixedChart
+    {
+        public List<double> Income_colum_data { get; set; }
+        public List<double> Cashflow_column_data { get; set; }
+    }
 }
