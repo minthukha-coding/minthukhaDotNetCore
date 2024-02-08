@@ -4,6 +4,8 @@
 @{
     List<double> _income_colum_data = Model.Income_colum_data;
     List<double> _cashflow_column_data = Model.Cashflow_column_data;
+    List<int> _xaxis_categories = Model.Xaxis_categories;
+    List<int> _revenue_line = Model.Revenue_line;
 }
 <div id="chart"></div>
 
@@ -11,8 +13,8 @@
     <script>
         let _income_colum_data = @(Html.Raw(JsonConvert.SerializeObject(_income_colum_data)))
         let _cashflow_column_data = @(Html.Raw(JsonConvert.SerializeObject(_cashflow_column_data)))
-        let _revenue_line = [20, 29, 37, 36, 44, 45, 50, 58]
-        let _xaxis_categories = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
+        let _xaxis_categories = @(Html.Raw(JsonConvert.SerializeObject(_xaxis_categories)))
+        let _revenue_line = @(Html.Raw(JsonConvert.SerializeObject(_revenue_line)))
 
         var options = {
             series: [{
