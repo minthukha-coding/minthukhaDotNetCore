@@ -144,6 +144,7 @@ public class cardHolder
             if (incorrectAttempts == maxAttempts)
             {
                 Console.WriteLine("Too many incorrect attempts. Your account is locked.");
+                return;
             }
         }
 
