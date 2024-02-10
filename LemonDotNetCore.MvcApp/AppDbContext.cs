@@ -1,7 +1,7 @@
 ﻿using LemonDotNetCore.MvcApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace LemonDotNetCore.RestAPI
+namespace LemonDotNetCore.MVCApp
 {
     public class AppDbContext : DbContext
     {

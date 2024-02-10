@@ -1,4 +1,4 @@
-using LemonDotNetCore.RestAPI;
+using LemonDotNetCore.MVCApp;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
