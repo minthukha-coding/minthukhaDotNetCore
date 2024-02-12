@@ -60,7 +60,11 @@ using System.Data.SqlClient;
 //HttpClientExample httpClientExample = new HttpClientExample();
 //await httpClientExample.Run();
 
-RestClientExample restClientExample = new RestClientExample();
-await restClientExample.Run();
+//RestClientExample restClientExample = new RestClientExample();
+//await restClientExample.Run();
+
+AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+adoDotNetExample.Read(1, 7);
+adoDotNetExample.Read(5, 7);
 
 Console.ReadKey();

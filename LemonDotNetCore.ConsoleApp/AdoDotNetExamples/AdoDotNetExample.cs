@@ -18,7 +18,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
             //Edit(12);
             //Delete(1);
             // Update(1, "hello title", "hello author", "hello content");
-            Create("hello title", "hello author", "hello content");
+            //Create("hello title", "hello author", "hello content");
 
         }
         private void Read()
@@ -50,6 +50,52 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
   FROM [dbo].[Tbl_Blog]";
 
             SqlCommand command = new SqlCommand(query, connection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sqlDataAdapter.Fill(dt);
+
+            connection.Close();
+            Console.WriteLine("Connection is closed");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Console.WriteLine("Id => " + dr["Blog_Id"]);
+                Console.WriteLine($"Title => {dr["Blog_Title"]}");
+                Console.WriteLine("Author => " + dr["Blog_Author"]);
+                Console.WriteLine("Content => " + dr["Blog_Content"]);
+                Console.WriteLine("_________________");
+            }
+        }
+        public void Read(int pageNO, int pageSize)
+        {
+            Console.WriteLine("Hello, World!");
+
+            //SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder();
+            //sqlConnectionStringBuilde.DataSource = ".";
+            //sqlConnectionStringBuilder.InitialCatalog = "LemonDotNetCore";
+            //sqlConnectionStringBuilder.UserID = "sa";
+            //sqlConnectionStringBuilder.Password = "sasasu";
+
+            SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+            {
+                DataSource = ".",
+                InitialCatalog = "LemonDotNetCore",
+                UserID = "sa",
+                Password = "sasasu"
+            };
+            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+
+            connection.Open();
+            Console.WriteLine("Connection is opened");
+
+            string query = "Sp_GetBlogs";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@pageNo", pageNO);
+            command.Parameters.AddWithValue("@pageSize", pageSize);
+
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             sqlDataAdapter.Fill(dt);
@@ -115,7 +161,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
                 Console.WriteLine("_________________");
             }
         }
-        private void Create(string title,string author,string content)
+        private void Create(string title, string author, string content)
         {
             SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
             {
@@ -141,7 +187,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
             command.Parameters.AddWithValue("@Blog_Title", title);
             command.Parameters.AddWithValue("@Blog_Author", author);
             command.Parameters.AddWithValue("@Blog_Content", content);
-            int result = command.ExecuteNonQuery(); 
+            int result = command.ExecuteNonQuery();
             connection.Close();
             string message = result > 0 ? "Saving successful" : "Saving failed!!!";
             Console.WriteLine(result);
@@ -174,7 +220,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
                 Console.WriteLine(message);
             }
         }
-        private void Update(int id , string title, string author, string content)
+        private void Update(int id, string title, string author, string content)
         {
             {
                 SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
