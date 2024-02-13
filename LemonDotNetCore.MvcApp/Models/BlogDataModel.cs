@@ -32,6 +32,13 @@ namespace LemonDotNetCore.MvcApp.Models
         public List<int>? DataSetData1 { get; set; }
         public List<int>? DataSetData2 { get; set; }
     }
+    public class LineChartModel
+    {
+        public List<string>? Labeldata { get; set; }
+        public List<string>? DataSetName { get; set; }
+        public List<int>? DataSetData { get; set; }
+
+    }
     #endregion
 
 
@@ -63,7 +70,7 @@ namespace LemonDotNetCore.MvcApp.Models
     {
         public List<string>? Title { get; set; }
         public List<string>? Subtitle { get; set; }
-    } 
+    }
     public class BulletGraphChartModel
     {
         public List<string>? Title { get; set; }
