@@ -1,4 +1,5 @@
-﻿<figure class="highcharts-figure">
+﻿@using Newtonsoft.Json
+<figure class="highcharts-figure">
     <div id="container1"></div>
     <div id="container2"></div>
     <div id="container3"></div>
@@ -73,8 +74,11 @@
     </style>
 }
 
+
+
  @section scripts{
      <script>
+        let _title = @(Html.Raw(JsonConvert.SerializeObject(Model.Title)))
         Highcharts.setOptions({
             chart: {
                 inverted: true,
@@ -113,7 +117,7 @@
                 marginTop: 40
             },
             title: {
-                text: '2017 YTD'
+                text: _title
             },
             xAxis: {
                 categories: ['<span class="hc-cat-title">Revenue</span><br/>U.S. $ (1,000s)']
