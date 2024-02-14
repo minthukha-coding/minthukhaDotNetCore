@@ -11,6 +11,16 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlServer(connectionString);
 });
 
+//builder.Services.AddScoped<HttpClient>();
+builder.Services.AddScoped(n =>
+{
+    HttpClient httpClient = new HttpClient()
+    {
+        BaseAddress = new Uri(builder.Configuration.GetSection("APIRUL").Value!),
+    };
+    return httpClient;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

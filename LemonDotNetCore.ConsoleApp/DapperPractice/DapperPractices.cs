@@ -34,10 +34,10 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
         private void Read()
         {
             string query = @"SELECT [Blog_Id]
-      ,[Blog_Title]
-      ,[Blog_Author]
-      ,[Blog_Content]
-  FROM [dbo].[Tbl_Blog]";
+                              ,[Blog_Title]
+                              ,[Blog_Author]
+                              ,[Blog_Content]
+                          FROM [dbo].[Tbl_Blog]";
             using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
             List<BlogDataModel> lst = db.Query<BlogDataModel>(query).ToList();
             foreach (BlogDataModel item in lst)
@@ -51,13 +51,13 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
         private void Edit(int id)
         {
             string query = @"SELECT [Blog_Id]
-      ,[Blog_Title]
-      ,[Blog_Author]
-      ,[Blog_Content]
-  FROM [dbo].[Tbl_Blog] where Blog_Id = @Blog_Id";
+                          ,[Blog_Title]
+                          ,[Blog_Author]
+                          ,[Blog_Content]
+                      FROM [dbo].[Tbl_Blog] where Blog_Id = @Blog_Id";
             using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
-            BlogDataModel? item = db.Query<BlogDataModel>(query,new BlogDataModel {Blog_Id = id }).FirstOrDefault();
-            if ( item is null )
+            BlogDataModel? item = db.Query<BlogDataModel>(query, new BlogDataModel { Blog_Id = id }).FirstOrDefault();
+            if (item is null)
             {
                 Console.WriteLine("No data is not found");
                 return;
@@ -79,13 +79,13 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
             SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
 
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
-           ([Blog_Title]
-           ,[Blog_Author]
-           ,[Blog_Content])
-     VALUES
-           (@Blog_Title
-           ,@Blog_Author
-           ,@Blog_Content)";
+                           ([Blog_Title]
+                           ,[Blog_Author]
+                           ,[Blog_Content])
+                     VALUES
+                           (@Blog_Title
+                           ,@Blog_Author
+                           ,@Blog_Content)";
 
             BlogDataModel blog = new BlogDataModel()
             {
@@ -94,13 +94,13 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
                 Blog_Content = content
             };
 
-            using IDbConnection db = new SqlConnection (sqlConnectionStringBuilder.ConnectionString);
+            using IDbConnection db = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, blog);
 
             string message = result > 0 ? "Saving Successful." : "Saving failed";
-            Console.WriteLine(message); 
+            Console.WriteLine(message);
         }
-        private void Update(int Id , string title, string author, string content)
+        private void Update(int Id, string title, string author, string content)
         {
             SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
             {
@@ -113,10 +113,10 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
 
 
             string query = @"UPDATE [dbo].[Tbl_Blog]
-   SET [Blog_Title] = @Blog_Title
-      ,[Blog_Author] = @Blog_Author
-      ,[Blog_Content] = @Blog_Content
- WHERE Blog_Id = @Blog_Id";
+                           SET [Blog_Title] = @Blog_Title
+                              ,[Blog_Author] = @Blog_Author
+                              ,[Blog_Content] = @Blog_Content
+                         WHERE Blog_Id = @Blog_Id";
 
             BlogDataModel blog = new BlogDataModel()
             {
@@ -145,7 +145,7 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
 
 
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
-      WHERE Blog_Id = @Blog_Id";
+                            WHERE Blog_Id = @Blog_Id";
 
             BlogDataModel blog = new BlogDataModel()
             {

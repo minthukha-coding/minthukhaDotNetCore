@@ -44,10 +44,10 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
             Console.WriteLine("Connection is opened");
 
             string query = @"SELECT [Blog_Id]
-      ,[Blog_Title]
-      ,[Blog_Author]
-      ,[Blog_Content]
-  FROM [dbo].[Tbl_Blog]";
+                          ,[Blog_Title]
+                          ,[Blog_Author]
+                          ,[Blog_Content]
+                      FROM [dbo].[Tbl_Blog]";
 
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
@@ -134,10 +134,10 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
             connection.Open();
 
             string query = @"SELECT [Blog_Id]
-      ,[Blog_Title]
-      ,[Blog_Author]
-      ,[Blog_Content]
-  FROM [dbo].[Tbl_Blog] where Blog_Id = @Blog_Id";
+                          ,[Blog_Title]
+                          ,[Blog_Author]
+                          ,[Blog_Content]
+                      FROM [dbo].[Tbl_Blog] where Blog_Id = @Blog_Id";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Blog_Id", id);
@@ -175,13 +175,13 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
             connection.Open();
 
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
-           ([Blog_Title]
-           ,[Blog_Author]
-           ,[Blog_Content])
-     VALUES
-           (@Blog_Title
-           ,@Blog_Author
-           ,@Blog_Content)";
+                           ([Blog_Title]
+                           ,[Blog_Author]
+                           ,[Blog_Content])
+                     VALUES
+                           (@Blog_Title
+                           ,@Blog_Author
+                           ,@Blog_Content)";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Blog_Title", title);
@@ -208,8 +208,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
                 connection.Open();
 
                 string query = @"DELETE FROM [dbo].[Tbl_Blog]
-      WHERE Blog_Id = @Blog_Id
-";
+                               WHERE Blog_Id = @Blog_Id";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Blog_Id", id);
@@ -235,10 +234,10 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
                 connection.Open();
 
                 string query = @"UPDATE [dbo].[Tbl_Blog]
-   SET [Blog_Title] = @Blog_Title
-      ,[Blog_Author] = @Blog_Author
-      ,[Blog_Content] = @Blog_Content
- WHERE Blog_Id = @Blog_Id";
+                               SET [Blog_Title] = @Blog_Title
+                                  ,[Blog_Author] = @Blog_Author
+                                  ,[Blog_Content] = @Blog_Content
+                             WHERE Blog_Id = @Blog_Id";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Blog_Id", id);
