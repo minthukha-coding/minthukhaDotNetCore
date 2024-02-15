@@ -1,0 +1,37 @@
+﻿<a class="btn btn-outline-dark float-end" href="/BlogHttpClient/Create">Create</a>
+
+@section scripts
+{
+    <script>
+        if ("@TempData["Message"]" != "") {
+            <div class="alert alert-success" >
+        @TempData["Message"]
+                </div>
+        }
+    </script>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Content</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Blog_Title</td>
+                <td>@item.Blog_Author</td>
+                <td>@item.Blog_Content</td>
+                <td>
+                    <a href="/BlogHttpClient/Edit/@item.Blog_Id" class="btn btn-success">Edit</a>
+                    <a href="/BlogHttpClient/Delete/@item.Blog_Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

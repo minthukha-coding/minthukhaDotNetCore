@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LemonDotNetCore.MvcApp.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace LemonDotNetCore.MvcApp.Controllers
 {
@@ -11,9 +13,16 @@ namespace LemonDotNetCore.MvcApp.Controllers
             _httpClient = httpClient;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var lst = new List<BlogDataModel>();
+            var response = await _httpClient.GetAsync("api/blog");
+            if (response.IsSuccessStatusCode)
+            {
+                string jsonStr = await response.Content.ReadAsStringAsync();
+                lst = JsonConvert.DeserializeObject<List<BlogDataModel>>(jsonStr)!;
+            }
+            return View(lst);
         }
     }
 }

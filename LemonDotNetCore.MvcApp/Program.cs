@@ -1,5 +1,8 @@
+using LemonDotNetCore.MvcApp;
 using LemonDotNetCore.MVCApp;
 using Microsoft.EntityFrameworkCore;
+using Refit;
+using RestSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +19,20 @@ builder.Services.AddScoped(n =>
 {
     HttpClient httpClient = new HttpClient()
     {
-        BaseAddress = new Uri(builder.Configuration.GetSection("APIRUL").Value!),
+        BaseAddress = new Uri(builder.Configuration.GetSection("APIURL").Value!),
     };
     return httpClient;
 });
+
+builder.Services.AddScoped(n =>
+{
+    RestClient restClient = new RestClient(builder.Configuration.GetSection("APIRUL").Value!);
+    return restClient;
+});
+
+builder.Services
+    .AddRefitClient<IBlogAPI>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetSection("ApiUrl").Value!));
 
 var app = builder.Build();
 
