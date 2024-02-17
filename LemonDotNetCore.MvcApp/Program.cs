@@ -26,13 +26,13 @@ builder.Services.AddScoped(n =>
 
 builder.Services.AddScoped(n =>
 {
-    RestClient restClient = new RestClient(builder.Configuration.GetSection("APIRUL").Value!);
+    RestClient restClient = new RestClient(builder.Configuration.GetSection("APIURL").Value!);
     return restClient;
 });
 
 builder.Services
     .AddRefitClient<IBlogAPI>()
-    .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetSection("ApiUrl").Value!));
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetSection("APIURL").Value!));
 
 var app = builder.Build();
 
