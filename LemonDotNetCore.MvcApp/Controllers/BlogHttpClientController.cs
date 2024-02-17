@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using LemonDotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic;
@@ -6,6 +7,9 @@ using System.Collections.Generic;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text;
 using System.Reflection.Metadata;
+=======
+﻿using Microsoft.AspNetCore.Mvc;
+>>>>>>> parent of 8ac0809 (.)
 
 namespace LemonDotNetCore.MvcApp.Controllers
 {
@@ -18,16 +22,9 @@ namespace LemonDotNetCore.MvcApp.Controllers
             _httpClient = httpClient;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var lst = new List<BlogDataModel>();
-            var response = await _httpClient.GetAsync("api/blog");
-            if (response.IsSuccessStatusCode)
-            {
-                string jsonStr = await response.Content.ReadAsStringAsync();
-                lst = JsonConvert.DeserializeObject<List<BlogDataModel>>(jsonStr)!;
-            }
-            return View(lst);
+            return View();
         }
         public async Task<IActionResult> Edit(int id)
         {
