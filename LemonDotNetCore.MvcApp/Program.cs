@@ -34,7 +34,10 @@ builder.Services.AddScoped(n =>
 builder.Services
     .AddRefitClient<IBlogAPI>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetSection("ApiUrl").Value!));
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 340352c (.)
 
 var app = builder.Build();
 
