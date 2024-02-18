@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LemonDotNetCore.MvcApp.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using RestSharp;
+using System.Net.Http;
 
 namespace LemonDotNetCore.MvcApp.Controllers
 {
@@ -10,18 +14,17 @@ namespace LemonDotNetCore.MvcApp.Controllers
         {
             _restClient = restClient;
         }
+
         public async Task<IActionResult> Index()
         {
-            List<BlogDataModel> lst = new();
-            RestRequest request = new("/api/BlogDapper", Method.Get);
-            var response = await _restClient.ExecuteAsync(request);
-
-            if (response.IsSuccessStatusCode)
+            var lst = new List<BlogDataModel>();
+            RestRequest restRequest = new RestRequest("api/blog", Method.Get);
+            var responce = await _restClient.ExecuteAsync(restRequest);
+            if (responce.IsSuccessStatusCode)
             {
-                string jsonStr = response.Content!;
-                lst = JsonConvert.DeserializeObject<List<BlogDataModel>>(jsonStr)!;
+                string jsonStr = responce.Content!;
+                lst = JsonConvert.DeserializeObject<List<BlogDataModel>>(jsonStr);
             }
-
             return View(lst);
         }
     }
