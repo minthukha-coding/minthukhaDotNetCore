@@ -1,18 +1,53 @@
 ﻿@model BlogDataModel
 
-<form method="post" action="/Blog/Update/@Model.Blog_Id">
+
     <div class="mb-3">
-        <label class="form-label">Title</label>
-        <input type="text" class="form-control" value="@Model.Blog_Title" name="Blog_Title">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" class="form-control" value="@Model.Blog_Title" name="Blog_Title" placeholder="name@example.com">
     </div>
     <div class="mb-3">
-        <label class="form-label">Author</label>
-        <input type="text" class="form-control" value="@Model.Blog_Author" name="Blog_Author">
+        <label for="exampleFormControlInput1" class="form-label">Author</label>
+        <input type="text" class="form-control" value="@Model.Blog_Author" name="Blog_Author" placeholder="name@example.com">
     </div>
     <div class="mb-3">
-        <label class="form-label">Content</label>
-        <input type="text" class="form-control" value="@Model.Blog_Content" name="Blog_Content">
+        <label for="exampleFormControlInput1" class="form-label">Content</label>
+        <input type="text" class="form-control" value="@Model.Blog_Content" name="Blog_Content" placeholder="name@example.com">
     </div>
-    <a href="/Blog" class="btn btn-dark">Cancel</a>
-    <button type="submit" class="btn btn-success">Update</button>
-</form>
+
+    <a class="btn btn-dark" href="/Blog">Cancel</a>
+    <button type="button" id="btnUpdate" class="btn btn-success">Update</button>
+@section scripts {
+    <script>
+        $('#btnUpdate').click(function (e) {
+            let title = $('#Blog_Title').val();
+            let author = $('#Blog_Author').val();
+            let content = $('#Blog_Content').val();
+
+            let _requestModel = {
+                Blog_Title: title,
+                Blog_Author: author,
+                Blog_Content: content
+            };
+
+            console.log({ _requestModel });
+
+            $.ajax({
+                type: "POST",
+                url: '/BlogAjax/Update/@Model.Blog_Id',
+                data: { requestModel: _requestModel },
+                dataType: "json",
+                success: function (data) {
+                    console.log({ data });
+                    alert(data.message);
+                    location.href = "/BlogAjax";
+                },
+                error: function (ex) {
+                    var r = jQuery.parseJSON(response.responseText);
+                    console.log("Message: " + r.Message);
+                    console.log("StackTrace: " + r.StackTrace);
+                    console.log("ExceptionType: " + r.ExceptionType);
+                }
+            });
+        })
+    </script>
+}

@@ -1,5 +1,16 @@
 ﻿<a class="btn btn-outline-dark float-end" href="/BlogHttpClient/Create">Create</a>
 
+@section scripts
+{
+    <script>
+        if ("@TempData["Message"]" != "") {
+            <div class="alert alert-success" >
+        @TempData["Message"]
+                </div>
+        }
+    </script>
+}
+
 <table class="table">
     <thead>
         <tr>

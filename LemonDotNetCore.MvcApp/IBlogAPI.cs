@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.MvcApp
+namespace LemonDotNetCore.ConsoleApp.ReflitExamples
 {
     public interface IBlogAPI
     {
