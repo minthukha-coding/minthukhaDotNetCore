@@ -1,27 +1,30 @@
 using LemonDotNetCore.MVCApp;
 using Microsoft.EntityFrameworkCore;
+using Refit;
+using RestSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews().AddJsonOptions(opt =>
+//{
+//    opt.JsonSerializerOptions.PropertyNamingPolicy = null;
+//});
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     string connectionString = builder.Configuration.GetConnectionString("DbConnection")!;
     opt.UseSqlServer(connectionString);
 });
-
 //builder.Services.AddScoped<HttpClient>();
 builder.Services.AddScoped(n =>
 {
     HttpClient httpClient = new HttpClient()
     {
-        BaseAddress = new Uri(builder.Configuration.GetSection("APIRUL").Value!),
+        BaseAddress = new Uri(builder.Configuration.GetSection("APIURL").Value!)
     };
     return httpClient;
 });
-
-<<<<<<< HEAD
 builder.Services.AddScoped(n =>
 {
     RestClient restClient = new RestClient(builder.Configuration.GetSection("APIURL").Value!);
@@ -32,8 +35,7 @@ builder.Services
     .AddRefitClient<IBlogAPI>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetSection("APIURL").Value!));
 
-=======
->>>>>>> parent of 8ac0809 (.)
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
