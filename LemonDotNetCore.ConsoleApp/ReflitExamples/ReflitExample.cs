@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LemonDotNetCore.ConsoleApp.ReflitExamples
 {
-    public class RefitExample
+    public class ReflitExample
     {
         private readonly IBlogAPI _blogAPI = RestService.For<IBlogAPI>("https://localhost:7241");
 

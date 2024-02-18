@@ -31,7 +31,7 @@ namespace LemonDotNetCore.MvcApp.Controllers
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> EditAsync(int id)
         {
 
             var item = await _appDbContext.Blogs.FirstOrDefaultAsync(x => x.Blog_Id == id);
