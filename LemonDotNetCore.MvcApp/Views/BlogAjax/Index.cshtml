@@ -2,13 +2,15 @@
 @{
     ViewData["Title"] = "Blog";
     int count = 0;
+    Layout = "_Layout";
 }
 
-<a href="/BlogAjax/Create" class="btn btn-success">New Blog</a>
+<a href="/BlogAjax/Create" class="btn btn-success">New</a>
 <table class="table">
     <thead>
         <tr>
             <th scope="col">#</th>
+            <th scope="col">Action</th>
             <th scope="col">Title</th>
             <th scope="col">Author</th>
             <th scope="col">Content</th>
@@ -21,7 +23,7 @@
                 <th scope="row">@(++count)</th>
                 <td>
                     <a href="/BlogAjax/Edit/@item.Blog_Id" class="btn btn-warning">Edit</a>
-                    <a href="/BlogAjax/Delete/@item.Blog_Id" data-id="@item.Blog_Id" class="btn btn-danger btn-delete">Delete</a>
+                    <button type="button" class="btn btn-danger btn-delete" data-id="@item.Blog_Id" data-blog-id="@item.Blog_Id">Delete</button>
                 </td>
                 <td>@item.Blog_Title</td>
                 <td>@item.Blog_Author</td>
@@ -38,7 +40,7 @@
 
             // let blogId = $(this).data('blog-id');
             let id = $(this).data('id');
-
+            console.log(id);
             let _requestModel = {
                 Blog_Id: id,
             };

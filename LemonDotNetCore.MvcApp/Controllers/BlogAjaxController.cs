@@ -41,6 +41,7 @@ namespace LemonDotNetCore.MvcApp.Controllers
             }
             return View(item);
         }
+
         public async Task<IActionResult> Update(int id, BlogDataModel requestModel)
         {
             var item = await _appDbContext.Blogs.FirstOrDefaultAsync(x => x.Blog_Id == id);
@@ -56,9 +57,9 @@ namespace LemonDotNetCore.MvcApp.Controllers
             int result = await _appDbContext.SaveChangesAsync();
             return Json(new { Message = result > 0 ? "Updating Successful." : "Updating Failed." });
         }
-        public async Task<IActionResult> DeleteAsync(int id)
+        public async Task<IActionResult> DeleteAsync(BlogDataModel requestModel)
         {
-            var item = await _appDbContext.Blogs.FirstOrDefaultAsync(x => x.Blog_Id == id);
+            var item = await _appDbContext.Blogs.FirstOrDefaultAsync(x => x.Blog_Id == requestModel.Blog_Id);
             if (item is null)
             {
                 return Json(new { Message = "No data found." });

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Create Blog";
+}
+
+<form method="post" action="/BlogRefit/Save">
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" name="Blog_Title" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" class="form-control" name="Blog_Author" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Content</label>
+        <input type="text" class="form-control" name="Blog_Content" required />
+    </div>
+    <a href="/BlogRefit" class="btn btn-dark">Go Back</a>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
