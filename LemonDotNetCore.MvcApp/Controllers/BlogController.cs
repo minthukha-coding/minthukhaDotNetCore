@@ -13,6 +13,38 @@ namespace LemonDotNetCore.MvcApp.Controllers
         {
             _appDbContext = appDbContext;
         }
+        [ActionName("List")]
+        public async Task<IActionResult> List(int pageNo = 1, int pageSize = 10)
+        {
+            var query = _appDbContext.Blogs
+                //.Where(x => x.DeleteFlag == false);
+                .AsNoTracking()
+                .OrderByDescending(x => x.Blog_Id);
+
+            var lst = await query.Skip((pageNo - 1) * pageSize).Take(pageSize).ToListAsync();
+            var rowCount = await query.CountAsync();
+
+            var pageCount = rowCount / pageSize;
+            if (rowCount % pageSize > 0)
+            {
+                pageCount++;
+            }
+
+            BlogResponseModel model = new BlogResponseModel()
+            {
+                Data = lst,
+                //PageSetting = new PageSettingModel()
+                //{
+                //    PageNo = pageNo,
+                //    PageSize = pageSize,
+                //    PageCount = pageCount,
+                //    PageRowCount = rowCount,
+                //}
+                PageSetting = new PageSettingModel(pageNo, pageSize, pageCount, rowCount, "/Blog/List")
+            };
+
+            return View(model);
+        }
         public async Task<IActionResult> Index()
         {
             var lst = await _appDbContext.Blogs
