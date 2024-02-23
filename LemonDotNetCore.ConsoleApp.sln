@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ConsoleApp", "LemonDotNetCore.ConsoleApp\LemonDotNetCore.ConsoleApp.csproj", "{71750D6E-6869-42EF-8969-6AEEB7EBB71B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{507DA1FF-159D-4C61-88BD-6C8D9644B0E7}"
-	ProjectSection(SolutionItems) = preProject
-		..\AKLMPSTYZDotNetCore\README.md = ..\AKLMPSTYZDotNetCore\README.md
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.RestAPI", "LemonDotNetCore.RestAPI\LemonDotNetCore.RestAPI.csproj", "{6BC797B4-C1D1-42F7-8B14-328B8DFBCDFD}"
 EndProject
@@ -16,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ATMConsoleA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.MvcApp", "LemonDotNetCore.MvcApp\LemonDotNetCore.MvcApp.csproj", "{FD48FA1C-C1B0-4312-AEF9-FFFE281929AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDotNetCore.ChartAppUsingSignalR", "LemonDotNetCore.ChartAppUsingSignalR\LemonDotNetCore.ChartAppUsingSignalR.csproj", "{FEF9D8DC-D1CE-447D-BE1F-DE2DFC372616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ChartAppUsingSignalR", "LemonDotNetCore.ChartAppUsingSignalR\LemonDotNetCore.ChartAppUsingSignalR.csproj", "{FEF9D8DC-D1CE-447D-BE1F-DE2DFC372616}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
