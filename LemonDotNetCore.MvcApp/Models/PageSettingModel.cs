@@ -3,6 +3,7 @@
 public class PageSettingModel
 {
     public PageSettingModel() { }
+
     public PageSettingModel(int pageNo, int pageSize, int pageCount, int pageRowCount, string pageUrl)
     {
         PageNo = pageNo;
