@@ -3,8 +3,38 @@ using LemonDotNetCore.ConsoleApp.DapperPractice;
 using LemonDotNetCore.ConsoleApp.EFCoreExamples;
 using LemonDotNetCore.ConsoleApp.HttpClientExamples;
 using LemonDotNetCore.ConsoleApp.RestClientExamples;
+using Serilog;
+using Serilog.Sinks.MSSqlServer;
 using System.Data;
 using System.Data.SqlClient;
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("log.txt",
+        rollingInterval: RollingInterval.Day,
+        rollOnFileSizeLimit: true)
+    .WriteTo
+    .MSSqlServer(
+        connectionString: "Server=.;Database=LemonDotNetCore; User ID = sa;Password = sasasu;TrustServerCertificate = true",
+        sinkOptions: new MSSqlServerSinkOptions { TableName = "Tbl_Log", AutoCreateSqlTable = true })
+    .CreateLogger();
+
+try
+{
+    // Your program here...
+    const string name = "Serilog";
+    Log.Information("Hello, {Name}!", name);
+    throw new InvalidOperationException("Oops...");
+}
+catch (Exception ex)
+{
+    Log.Error(ex, "Unhandled exception");
+}
+finally
+{
+    await Log.CloseAndFlushAsync(); // ensure all logs written before app exits
+}
+
 
 //console.writeline("hello, world!");
 
@@ -63,8 +93,8 @@ using System.Data.SqlClient;
 //RestClientExample restClientExample = new RestClientExample();
 //await restClientExample.Run();
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-adoDotNetExample.Read(1, 7);
-adoDotNetExample.Read(5, 7);
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//adoDotNetExample.Read(1, 7);
+//adoDotNetExample.Read(5, 7);
 
 Console.ReadKey();
