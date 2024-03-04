@@ -1,4 +1,4 @@
-﻿using LemonDotNetCore.RestAPI.Models;
+﻿using LemonDotNetCore.MinimalAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,22 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.RestAPI
+namespace LemonDotNetCore.MinimalAPI
 {
     public class AppDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
-            {
-                DataSource = ".",
-                InitialCatalog = "LemonDotNetCore",
-                UserID = "sa",
-                Password = "sasasu",
-                TrustServerCertificate = true,
-            };
-
-            optionsBuilder.UseSqlServer(sqlConnectionStringBuilder.ConnectionString);
         }
         public DbSet<BlogDataModel> Blogs { get; set; }
     }
