@@ -8,12 +8,12 @@ namespace LemonDotNetCore.RealtimeChartAppUsingSignalR.Controllers
 {
     public class TeamController : Controller
     {
-        private readonly AppDbContext _appDbContext;
+        private readonly AppDbContext _context;
         private readonly IHubContext<TeamHub> _hubContext;
 
-        public TeamController(AppDbContext appDbContext, IHubContext<TeamHub> hubContext)
+        public TeamController(AppDbContext context, IHubContext<TeamHub> hubContext)
         {
-            _appDbContext = appDbContext;
+            _context = context;
             _hubContext = hubContext;
         }
 
@@ -29,17 +29,25 @@ namespace LemonDotNetCore.RealtimeChartAppUsingSignalR.Controllers
             return View("TeamCreate");
         }
 
-        [ActionName("TeamSave")]
-        public async Task<IActionResult> TeamSave(TeamDataModel model)
+        [ActionName("Save")]
+        public async Task<IActionResult> TeamSave(TeamDataModel team)
         {
-            await _appDbContext.AddAsync(model);
-            await _appDbContext.SaveChangesAsync();
+            await _context.AddAsync(team);
+            await _context.SaveChangesAsync();
 
-            var lst = await _appDbContext.Teams
+            var lst = await _context.Teams
                 .AsNoTracking()
                 .ToListAsync();
-            string json = JsonSerializer.Serialize(lst);
+
+            var data = new
+            {
+                Series = lst.Select(x => x.Score).ToList(),
+                Labels = lst.Select(x => x.TeamName).ToList()
+            };
+
+            string json = JsonSerializer.Serialize(data);
             await _hubContext.Clients.All.SendAsync("ReceiveTeamClientEvent", json);
+
             return Redirect("/Team/Create");
         }
     }
