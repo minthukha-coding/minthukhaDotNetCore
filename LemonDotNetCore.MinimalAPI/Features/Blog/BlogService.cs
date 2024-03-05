@@ -2,6 +2,7 @@
 using LemonDotNetCore.MinimalAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace LemonDotNetCore.MinimalApi.Features.Blog
 {
@@ -44,6 +45,41 @@ namespace LemonDotNetCore.MinimalApi.Features.Blog
                 return Results.Ok(message);
             })
                 .WithName("CreateBlog")
+                .WithOpenApi();
+
+            app.MapPut("/api/blog", async ([FromServicesAttribute] AppDbContext dbContext, int id, BlogDataModel blog) =>
+            {
+                BlogDataModel? item = await dbContext.Blogs.FirstOrDefaultAsync(x => x.Blog_Id == id);
+                if (item is null)
+                    return Results.NotFound("No data is not found");
+
+                item.Blog_Title = blog.Blog_Title;
+                item.Blog_Author = blog.Blog_Author;
+                item.Blog_Content = blog.Blog_Content;
+
+                var result = await dbContext.SaveChangesAsync();
+                var message = result > 0 ? "Saving Successful." : "Saving Failed";
+                return Results.Ok(message);
+            })
+                .WithName("UpdateBlog")
+                .WithOpenApi();
+
+            app.MapDelete("/api/blog/{id}", async ([FromServicesAttribute] AppDbContext dbContext, int id) =>
+            {
+                BlogDataModel? item = await dbContext.Blogs.FirstAsync(x => x.Blog_Id == id);
+                if (item is null)
+                {
+                    return Results.NotFound("No data found.");
+                }
+
+                dbContext.Blogs.Remove(item);
+                int result = await dbContext.SaveChangesAsync();
+                var message = result > 0 ? "Deleting Successful." : "Deleting Fail.";
+
+                return Results.Ok(message);
+            })
+
+                .WithName("ီDeleteBlog")
                 .WithOpenApi();
 
             return app;
