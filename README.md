@@ -1,5 +1,5 @@
 
-# DotNetCoreTrainingBatch2
+# minthukhaDotNetCore
 - [CORS Enable in Asp-net-core](https://stackoverflow.com/questions/31942037/how-to-enable-cors-in-asp-net-core )
 
 
