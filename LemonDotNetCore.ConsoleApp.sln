@@ -13,11 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ATMConsoleA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.MvcApp", "LemonDotNetCore.MvcApp\LemonDotNetCore.MvcApp.csproj", "{FD48FA1C-C1B0-4312-AEF9-FFFE281929AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ChartAppUsingSignalR", "LemonDotNetCore.ChartAppUsingSignalR\LemonDotNetCore.ChartAppUsingSignalR.csproj", "{FEF9D8DC-D1CE-447D-BE1F-DE2DFC372616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ChatAppUsingSignalR", "LemonDotNetCore.ChartAppUsingSignalR\LemonDotNetCore.ChatAppUsingSignalR.csproj", "{FEF9D8DC-D1CE-447D-BE1F-DE2DFC372616}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.MinimalAPI", "LemonDotNetCore.MinimalAPI\LemonDotNetCore.MinimalAPI.csproj", "{95B0505B-8064-48FE-9A12-2792B664A28A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDotNetCore.RealtimeChartAppUsingSignalR", "LemonDotNetCore.RealtimeChartAppUsingSignalR\LemonDotNetCore.RealtimeChartAppUsingSignalR.csproj", "{7F3735F7-66F9-42C2-862B-4BC7699BFF90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.RealtimeChartAppUsingSignalR", "LemonDotNetCore.RealtimeChartAppUsingSignalR\LemonDotNetCore.RealtimeChartAppUsingSignalR.csproj", "{7F3735F7-66F9-42C2-862B-4BC7699BFF90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
