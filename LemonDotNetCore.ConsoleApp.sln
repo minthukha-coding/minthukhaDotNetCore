@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.MinimalAPI"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.RealtimeChartAppUsingSignalR", "LemonDotNetCore.RealtimeChartAppUsingSignalR\LemonDotNetCore.RealtimeChartAppUsingSignalR.csproj", "{7F3735F7-66F9-42C2-862B-4BC7699BFF90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDotNetCore.ThemeAPP", "LemonDotNetCore.ThemeAPP\LemonDotNetCore.ThemeAPP.csproj", "{84040D22-B07C-4A2A-B66D-019DA0518BF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{7F3735F7-66F9-42C2-862B-4BC7699BFF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F3735F7-66F9-42C2-862B-4BC7699BFF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F3735F7-66F9-42C2-862B-4BC7699BFF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84040D22-B07C-4A2A-B66D-019DA0518BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84040D22-B07C-4A2A-B66D-019DA0518BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84040D22-B07C-4A2A-B66D-019DA0518BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84040D22-B07C-4A2A-B66D-019DA0518BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
