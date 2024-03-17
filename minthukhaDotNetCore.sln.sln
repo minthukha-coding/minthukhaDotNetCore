@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ConsoleApp", "LemonDotNetCore.ConsoleApp\LemonDotNetCore.ConsoleApp.csproj", "{71750D6E-6869-42EF-8969-6AEEB7EBB71B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.ConsoleApp", "minthukhaDotNetCore.ConsoleApp\minthukhaDotNetCore.ConsoleApp.csproj", "{71750D6E-6869-42EF-8969-6AEEB7EBB71B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{507DA1FF-159D-4C61-88BD-6C8D9644B0E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.RestAPI", "LemonDotNetCore.RestAPI\LemonDotNetCore.RestAPI.csproj", "{6BC797B4-C1D1-42F7-8B14-328B8DFBCDFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.RestAPI", "minthukhaDotNetCore.RestAPI\minthukhaDotNetCore.RestAPI.csproj", "{6BC797B4-C1D1-42F7-8B14-328B8DFBCDFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ATMConsoleApp", "LemonDotNetCore.ATMConsoleApp\LemonDotNetCore.ATMConsoleApp.csproj", "{CDC65B11-2E34-4814-873D-1145968B7AC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.ATMConsoleApp", "minthukhaDotNetCore.ATMConsoleApp\minthukhaDotNetCore.ATMConsoleApp.csproj", "{CDC65B11-2E34-4814-873D-1145968B7AC8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.MvcApp", "LemonDotNetCore.MvcApp\LemonDotNetCore.MvcApp.csproj", "{FD48FA1C-C1B0-4312-AEF9-FFFE281929AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.MvcApp", "minthukhaDotNetCore.MvcApp\minthukhaDotNetCore.MvcApp.csproj", "{FD48FA1C-C1B0-4312-AEF9-FFFE281929AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.ChatAppUsingSignalR", "LemonDotNetCore.ChartAppUsingSignalR\LemonDotNetCore.ChatAppUsingSignalR.csproj", "{FEF9D8DC-D1CE-447D-BE1F-DE2DFC372616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.ChatAppUsingSignalR", "LemonDotNetCore.ChartAppUsingSignalR\minthukhaDotNetCore.ChatAppUsingSignalR.csproj", "{FEF9D8DC-D1CE-447D-BE1F-DE2DFC372616}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.MinimalAPI", "LemonDotNetCore.MinimalAPI\LemonDotNetCore.MinimalAPI.csproj", "{95B0505B-8064-48FE-9A12-2792B664A28A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.MinimalAPI", "minthukhaDotNetCore.MinimalAPI\minthukhaDotNetCore.MinimalAPI.csproj", "{95B0505B-8064-48FE-9A12-2792B664A28A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LemonDotNetCore.RealtimeChartAppUsingSignalR", "LemonDotNetCore.RealtimeChartAppUsingSignalR\LemonDotNetCore.RealtimeChartAppUsingSignalR.csproj", "{7F3735F7-66F9-42C2-862B-4BC7699BFF90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.RealtimeChartAppUsingSignalR", "minthukhaDotNetCore.RealtimeChartAppUsingSignalR\minthukhaDotNetCore.RealtimeChartAppUsingSignalR.csproj", "{7F3735F7-66F9-42C2-862B-4BC7699BFF90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LemonDotNetCore.ThemeAPP", "LemonDotNetCore.ThemeAPP\LemonDotNetCore.ThemeAPP.csproj", "{84040D22-B07C-4A2A-B66D-019DA0518BF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minthukhaDotNetCore.ThemeAPP", "minthukhaDotNetCore.ThemeAPP\minthukhaDotNetCore.ThemeAPP.csproj", "{84040D22-B07C-4A2A-B66D-019DA0518BF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
