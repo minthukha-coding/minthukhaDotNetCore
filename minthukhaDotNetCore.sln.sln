@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.Minimal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.RealtimeChartAppUsingSignalR", "minthukhaDotNetCore.RealtimeChartAppUsingSignalR\minthukhaDotNetCore.RealtimeChartAppUsingSignalR.csproj", "{7F3735F7-66F9-42C2-862B-4BC7699BFF90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minthukhaDotNetCore.ThemeAPP", "minthukhaDotNetCore.ThemeAPP\minthukhaDotNetCore.ThemeAPP.csproj", "{84040D22-B07C-4A2A-B66D-019DA0518BF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minthukhaDotNetCore.ThemeAPP", "minthukhaDotNetCore.ThemeAPP\minthukhaDotNetCore.ThemeAPP.csproj", "{84040D22-B07C-4A2A-B66D-019DA0518BF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
