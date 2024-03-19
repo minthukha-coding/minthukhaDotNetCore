@@ -36,7 +36,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
                 DataSource = ".",
                 InitialCatalog = "LemonDotNetCore",
                 UserID = "sa",
-                Password = "sasasu"
+                Password = "sasa@123"
             };
             SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
 

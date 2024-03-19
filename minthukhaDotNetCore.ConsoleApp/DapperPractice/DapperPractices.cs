@@ -19,7 +19,7 @@ namespace LemonDotNetCore.ConsoleApp.DapperPractice
             DataSource = ".",
             InitialCatalog = "LemonDotNetCore",
             UserID = "sa",
-            Password = "sasasu"
+            Password = "sasa@123"
         };
         public void Run()
         {
