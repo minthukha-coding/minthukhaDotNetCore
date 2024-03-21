@@ -59,13 +59,13 @@ namespace LemonDotNetCore.RestAPI.Controllers
         public IActionResult CreateBlog(BlogDataModel blog)
         {
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
-           ([Blog_Title]
-           ,[Blog_Author]
-           ,[Blog_Content])
-     VALUES
-           (@Blog_Title
-           ,@Blog_Author
-           ,@Blog_Content)";
+                           ([Blog_Title]
+                           ,[Blog_Author]
+                           ,[Blog_Content])
+                     VALUES
+                           (@Blog_Title
+                           ,@Blog_Author
+                           ,@Blog_Content)";
             using IDbConnection db = new System.Data.SqlClient.SqlConnection(sqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, blog);
             string message = result > 0 ? "Saving Successful." : "Saving Failed.";
