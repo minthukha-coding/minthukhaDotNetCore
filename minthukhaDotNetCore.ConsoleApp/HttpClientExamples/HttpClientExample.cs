@@ -22,6 +22,7 @@ namespace LemonDotNetCore.ConsoleApp.HttpClientExamples
             await Patch(6, "lemon", "lemon");
             await Delete(10811);
         }
+
         #region Read
         public async Task Read()
         {
