@@ -45,6 +45,7 @@ namespace LemonDotNetCore.ConsoleApp.RestClientExamples
             }
         }
         #endregion
+
         #region Edit
         public async Task Edit(int id)
         {
@@ -67,6 +68,7 @@ namespace LemonDotNetCore.ConsoleApp.RestClientExamples
             }
         }
         #endregion
+
         #region Create
         public async Task Create(string title, string author, string content)
         {
@@ -83,6 +85,7 @@ namespace LemonDotNetCore.ConsoleApp.RestClientExamples
             Console.WriteLine(response.Content);
         }
         #endregion
+
         #region Update 
         public async Task Update(int id, string title, string author, string content)
         {
@@ -100,6 +103,7 @@ namespace LemonDotNetCore.ConsoleApp.RestClientExamples
             Console.WriteLine(response.Content);
         }
         #endregion
+
         #region Patch
         public async Task Patch(int id, string title, string author)
         {
@@ -116,6 +120,7 @@ namespace LemonDotNetCore.ConsoleApp.RestClientExamples
             Console.WriteLine(response.Content!);
         }
         #endregion
+
         #region Delete
         public async Task Delete(int id)
         {
