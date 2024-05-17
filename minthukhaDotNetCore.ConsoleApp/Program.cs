@@ -15,7 +15,7 @@ Log.Logger = new LoggerConfiguration()
         rollOnFileSizeLimit: true)
     .WriteTo
     .MSSqlServer(
-        connectionString: "Server=.;Database=LemonDotNetCore; User ID = sa;Password = sasasu;TrustServerCertificate = true",
+        connectionString: "Server=.;Database=LemonDotNetCore; User ID = sa;Password = sasa@123;TrustServerCertificate = true",
         sinkOptions: new MSSqlServerSinkOptions { TableName = "Tbl_Log", AutoCreateSqlTable = true })
     .CreateLogger();
 
