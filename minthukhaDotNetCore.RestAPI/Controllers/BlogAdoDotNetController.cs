@@ -20,7 +20,7 @@ namespace LemonDotNetCore.RestAPI.Controllers
             DataSource = ".",
             InitialCatalog = "LemonDotNetCore",
             UserID = "sa",
-            Password = "sasasu",
+            Password = "sas@123",
             TrustServerCertificate = true,
         };
 
