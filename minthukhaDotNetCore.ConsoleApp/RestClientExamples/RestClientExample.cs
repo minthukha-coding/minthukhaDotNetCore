@@ -23,6 +23,7 @@ namespace LemonDotNetCore.ConsoleApp.RestClientExamples
             //await Patch(1083, "test", "test");
             //await Delete(1083);
         }
+
         #region Read
         public async Task Read()
         {
