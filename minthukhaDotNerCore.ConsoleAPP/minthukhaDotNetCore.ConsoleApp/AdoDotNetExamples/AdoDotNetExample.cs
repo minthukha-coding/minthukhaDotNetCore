@@ -18,7 +18,7 @@ namespace LemonDotNetCore.ConsoleApp.AdoDotNetExamples
             //Edit(12);
             //Delete(1);
             // Update(1, "hello title", "hello author", "hello content");
-            Create("hello title", "hello author", "hello content");
+            //Create("hello title", "hello author", "hello content");
 
         }
         private void Read()
