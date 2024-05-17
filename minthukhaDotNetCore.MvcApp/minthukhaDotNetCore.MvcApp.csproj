@@ -31,4 +31,8 @@
 	  <None Include="Views\BlogRefit\Edit.cshtml" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\minthukhaDotNetCore.RestAPI\minthukhaDotNetCore.RestAPI.csproj" />
+	</ItemGroup>
+
 </Project>
