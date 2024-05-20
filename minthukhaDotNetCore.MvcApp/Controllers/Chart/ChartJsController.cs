@@ -1,7 +1,7 @@
 ﻿using LemonDotNetCore.MvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LemonDotNetCore.MvcApp.Controllers
+namespace LemonDotNetCore.MvcApp.Controllers.Chart
 {
     public class ChartJsController : Controller
     {
