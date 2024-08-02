@@ -99,13 +99,11 @@ public class cardHolder
         chrdHolders.Add(new cardHolder("32846284443243", 6311, "Harn", "yanm", 753.54));
         chrdHolders.Add(new cardHolder("32746284443243", 4311, "James", "Jon", 533.82));
 
-
         Console.WriteLine("Welcome to ATM");
         Console.WriteLine("Please insert your debit card no. :");
 
         string debitCardNum = "";
         cardHolder currnetUser;
-
 
         while (true)
         {
