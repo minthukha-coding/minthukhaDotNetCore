@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.MinimalAPI
+namespace LemonDotNetCore.MinimalAPI;
+
+public class AppDbContext : DbContext
 {
-    public class AppDbContext : DbContext
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
-        public DbSet<BlogDataModel> Blogs { get; set; }
     }
+    public DbSet<BlogDataModel> Blogs { get; set; }
 }
