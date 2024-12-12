@@ -1,4 +1,4 @@
-﻿using LemonDotNetCore.MinimalAPI.Models;
+﻿using minthukhaDotNetCore.MinimalAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.MinimalAPI;
+namespace minthukhaDotNetCore.MinimalAPI;
 
 public class AppDbContext : DbContext
 {

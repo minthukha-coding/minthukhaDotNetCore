@@ -1,6 +1,4 @@
-﻿using System;
-
-public class cardHolder
+﻿public class cardHolder
 {
     string cardNum;
     int pin;
@@ -16,38 +14,47 @@ public class cardHolder
         this.lastName = lastName;
         this.blance = blance;
     }
+
     public String getNum()
     {
         return cardNum;
     }
+
     public int getPin()
     {
         return pin;
     }
+
     public double getBlance()
     {
         return blance;
     }
+
     public string getFirstName()
     {
         return firstName;
     }
+
     public void setNum(String newCardNum)
     {
         cardNum = newCardNum;
     }
+
     public void setPin(int newPin)
     {
         pin = newPin;
     }
+
     public void setFirstName(String newFirstName)
     {
         firstName = newFirstName;
     }
+
     public void setLastName(String newLastName)
     {
         lastName = newLastName;
     }
+
     public void setBlance(double newBlance)
     {
         blance = newBlance;
@@ -67,7 +74,7 @@ public class cardHolder
         void deposite(cardHolder curentUser)
         {
             Console.WriteLine("How much woudl you like to deposite?");
-            double deposite = Double.Parse(Console.ReadLine());
+            double deposite = Double.Parse(Console.ReadLine()!);
             curentUser.setBlance(deposite);
             Console.WriteLine("Thanks you for your deposite.Your balance is " + curentUser.getBlance());
         }
@@ -75,7 +82,7 @@ public class cardHolder
         void withdrawal(cardHolder curentUser)
         {
             Console.WriteLine("How much woudl you like to withdrawal?");
-            double withdrawal = Double.Parse(Console.ReadLine());
+            double withdrawal = Double.Parse(Console.ReadLine()!);
 
             if (curentUser.getBlance() < withdrawal)
             {
@@ -87,6 +94,7 @@ public class cardHolder
                 Console.WriteLine("Withdrawal finish.Thanks you...");
             }
         }
+
         void balance(cardHolder curentUser)
         {
             Console.WriteLine("Curent blance: " + curentUser.getBlance());
@@ -109,8 +117,8 @@ public class cardHolder
         {
             try
             {
-                debitCardNum = Console.ReadLine();
-                currnetUser = chrdHolders.FirstOrDefault(a => a.cardNum == debitCardNum);
+                debitCardNum = Console.ReadLine()!;
+                currnetUser = chrdHolders.FirstOrDefault(a => a.cardNum == debitCardNum)!;
                 if (currnetUser != null)
                 { break; }
                 else { Console.WriteLine("Card is not recognized.Please try again!"); }
@@ -130,7 +138,7 @@ public class cardHolder
         {
             try
             {
-                usesrPin = int.Parse(Console.ReadLine());
+                usesrPin = int.Parse(Console.ReadLine()!);
                 if (currnetUser.getPin() == usesrPin) { break; }
                 incorrectAttempts++;
                 Console.WriteLine($"Wrong pin. {maxAttempts - incorrectAttempts} attempts remaining. Please try again!");
@@ -153,7 +161,7 @@ public class cardHolder
             printOptions();
             try
             {
-                option = int.Parse(Console.ReadLine());
+                option = int.Parse(Console.ReadLine()!);
             }
             catch { }
             if (option == 1) { deposite(currnetUser); }

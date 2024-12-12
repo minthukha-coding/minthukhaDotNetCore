@@ -1,5 +1,5 @@
-using LemonDotNetCore.RealtimeChartAppUsingSignalR;
-using LemonDotNetCore.RealtimeChartAppUsingSignalR.Hubs;
+using minthukhaDotNetCore.RealtimeChartAppUsingSignalR;
+using minthukhaDotNetCore.RealtimeChartAppUsingSignalR.Hubs;
 using Microsoft.EntityFrameworkCore;
 
 

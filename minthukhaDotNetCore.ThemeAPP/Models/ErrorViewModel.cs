@@ -1,4 +1,4 @@
-namespace LemonDotNetCore.ThemeAPP.Models
+namespace minthukhaDotNetCore.ThemeAPP.Models
 {
     public class ErrorViewModel
     {

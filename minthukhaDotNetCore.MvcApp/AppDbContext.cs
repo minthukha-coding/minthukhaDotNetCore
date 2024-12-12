@@ -1,11 +1,10 @@
-﻿using LemonDotNetCore.MvcApp.Models;
+﻿using minthukhaDotNetCore.MvcApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace LemonDotNetCore.MVCApp
+namespace minthukhaDotNetCore.MVCApp;
+
+public class AppDbContext : DbContext
 {
-    public class AppDbContext : DbContext
-    {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        public DbSet<BlogDataModel> Blogs { get; set; }
-    }
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public DbSet<BlogDataModel> Blogs { get; set; }
 }

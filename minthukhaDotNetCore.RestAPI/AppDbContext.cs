@@ -1,4 +1,4 @@
-﻿using LemonDotNetCore.RestAPI.Models;
+﻿using minthukhaDotNetCore.RestAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.RestAPI
+namespace minthukhaDotNetCore.RestAPI
 {
     public class AppDbContext : DbContext
     {

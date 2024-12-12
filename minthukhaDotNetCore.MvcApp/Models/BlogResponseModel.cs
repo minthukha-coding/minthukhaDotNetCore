@@ -1,8 +1,7 @@
-﻿namespace LemonDotNetCore.MvcApp.Models
+﻿namespace minthukhaDotNetCore.MvcApp.Models;
+
+public class BlogResponseModel
 {
-    public class BlogResponseModel
-    {
-        public PageSettingModel PageSetting { get; set; }
-        public List<BlogDataModel> Data { get; set; }
-    }
+    public PageSettingModel? PageSetting { get; set; }
+    public List<BlogDataModel>? Data { get; set; }
 }

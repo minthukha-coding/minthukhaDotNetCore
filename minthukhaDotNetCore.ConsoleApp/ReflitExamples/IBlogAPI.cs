@@ -1,28 +1,22 @@
-﻿using LemonDotNetCore.ConsoleApp.Models;
+﻿using minthukhaDotNetCore.ConsoleApp.Models;
 using Refit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LemonDotNetCore.ConsoleApp.ReflitExamples
+namespace minthukhaDotNetCore.ConsoleApp.ReflitExamples;
+
+public interface IBlogAPI
 {
-    public interface IBlogAPI
-    {
-        [Get("/api/blog")]
-        Task<List<BlogDataModel>> GetBlogs();
+    [Get("/api/blog")]
+    Task<List<BlogDataModel>> GetBlogs();
 
-        [Get("/api/blog/{id}")]
-        Task<BlogDataModel> GetBlog(int id);
+    [Get("/api/blog/{id}")]
+    Task<BlogDataModel> GetBlog(int id);
 
-        [Post("/api/blog")]
-        Task<string> CreateBlog(BlogDataModel blog);
+    [Post("/api/blog")]
+    Task<string> CreateBlog(BlogDataModel blog);
 
-        [Put("/api/blog/{id}")]
-        Task<string> UpdateBlog(int id, BlogDataModel blog);
+    [Put("/api/blog/{id}")]
+    Task<string> UpdateBlog(int id, BlogDataModel blog);
 
-        [Delete("/api/blog/{id}")]
-        Task<string> DeleteBlog(int id);
-    }
+    [Delete("/api/blog/{id}")]
+    Task<string> DeleteBlog(int id);
 }

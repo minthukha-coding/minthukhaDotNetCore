@@ -1,5 +1,5 @@
-using LemonDotNetCore.MvcApp;
-using LemonDotNetCore.MVCApp;
+using minthukhaDotNetCore.MvcApp;
+using minthukhaDotNetCore.MVCApp;
 using Microsoft.EntityFrameworkCore;
 using Refit;
 using RestSharp;

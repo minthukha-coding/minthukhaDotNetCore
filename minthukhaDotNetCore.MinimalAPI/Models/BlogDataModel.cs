@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonDotNetCore.MinimalAPI.Models;
+namespace minthukhaDotNetCore.MinimalAPI.Models;
 
 [Table("Tbl_Blog")]
 public class BlogDataModel

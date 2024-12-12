@@ -1,6 +1,6 @@
-using LemonDotNetCore.MinimalApi.Features.Blog;
-using LemonDotNetCore.MinimalAPI;
-using LemonDotNetCore.MinimalAPI.Models;
+using minthukhaDotNetCore.MinimalApi.Features.Blog;
+using minthukhaDotNetCore.MinimalAPI;
+using minthukhaDotNetCore.MinimalAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

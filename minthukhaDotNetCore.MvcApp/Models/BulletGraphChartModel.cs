@@ -1,7 +1,6 @@
-﻿namespace LemonDotNetCore.MvcApp.Models
+﻿namespace minthukhaDotNetCore.MvcApp.Models;
+
+public class BulletGraphChartModel
 {
-    public class BulletGraphChartModel
-    {
-        public List<string>? Title { get; set; }
-    }
+    public List<string>? Title { get; set; }
 }

@@ -1,9 +1,8 @@
-namespace LemonDotNetCore.RealtimeChartAppUsingSignalR.Models
-{
-    public class ErrorViewModel
-    {
-        public string? RequestId { get; set; }
+namespace minthukhaDotNetCore.RealtimeChartAppUsingSignalR.Models;
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-    }
+public class ErrorViewModel
+{
+    public string? RequestId { get; set; }
+
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 }

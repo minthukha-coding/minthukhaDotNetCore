@@ -1,4 +1,4 @@
-using LemonDotNetCore.ChartAppUsingSignalR.Hubs;
+using minthukhaDotNetCore.ChartAppUsingSignalR.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 

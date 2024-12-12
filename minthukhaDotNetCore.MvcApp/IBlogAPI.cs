@@ -1,12 +1,7 @@
-﻿using LemonDotNetCore.MvcApp.Models;
+﻿using minthukhaDotNetCore.MvcApp.Models;
 using Refit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LemonDotNetCore.MvcApp;
+namespace minthukhaDotNetCore.MvcApp;
 
 public interface IBlogAPI
 {

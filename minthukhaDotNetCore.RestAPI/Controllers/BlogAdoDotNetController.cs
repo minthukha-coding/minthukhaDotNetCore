@@ -1,15 +1,13 @@
 ﻿using Dapper;
-using LemonDotNetCore.RestAPI.Models;
+using minthukhaDotNetCore.RestAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Data.SqlClient;
 using SqlCommand = Microsoft.Data.SqlClient.SqlCommand;
 using SqlConnection = Microsoft.Data.SqlClient.SqlConnection;
 using SqlConnectionStringBuilder = Microsoft.Data.SqlClient.SqlConnectionStringBuilder;
 using SqlDataAdapter = Microsoft.Data.SqlClient.SqlDataAdapter;
 
-namespace LemonDotNetCore.RestAPI.Controllers;
+namespace minthukhaDotNetCore.RestAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

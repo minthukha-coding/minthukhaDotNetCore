@@ -1,10 +1,10 @@
-﻿using LemonDotNetCore.MinimalAPI;
-using LemonDotNetCore.MinimalAPI.Models;
+﻿using minthukhaDotNetCore.MinimalAPI;
+using minthukhaDotNetCore.MinimalAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
-namespace LemonDotNetCore.MinimalApi.Features.Blog;
+namespace minthukhaDotNetCore.MinimalApi.Features.Blog;
 
 public static class BlogService
 {

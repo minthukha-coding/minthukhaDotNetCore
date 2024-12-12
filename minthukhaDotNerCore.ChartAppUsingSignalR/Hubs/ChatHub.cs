@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace LemonDotNetCore.ChartAppUsingSignalR.Hubs
+namespace minthukhaDotNetCore.ChartAppUsingSignalR.Hubs;
+
+public class ChatHub : Hub
 {
-    public class ChatHub : Hub
+    public async Task ServerReciveMessage(string user, string message)
     {
-        public async Task ServerReciveMessage(string user, string message)
-        {
-            await Clients.All.SendAsync("ClientReceiveMessage", user, message);
-        }
+        await Clients.All.SendAsync("ClientReceiveMessage", user, message);
     }
 }

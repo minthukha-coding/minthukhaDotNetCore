@@ -1,8 +1,8 @@
-﻿using LemonDotNetCore.ThemeAPP.Models;
+﻿using minthukhaDotNetCore.ThemeAPP.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace LemonDotNetCore.ThemeAPP.Controllers;
+namespace minthukhaDotNetCore.ThemeAPP.Controllers;
 
 public class HomeController : Controller
 {

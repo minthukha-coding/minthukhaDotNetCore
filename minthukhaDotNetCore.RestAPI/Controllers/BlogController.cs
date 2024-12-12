@@ -1,8 +1,7 @@
-﻿using LemonDotNetCore.RestAPI.Models;
-using Microsoft.AspNetCore.Http;
+﻿using minthukhaDotNetCore.RestAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LemonDotNetCore.RestAPI.Controllers;
+namespace minthukhaDotNetCore.RestAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

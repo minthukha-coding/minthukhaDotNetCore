@@ -1,4 +1,4 @@
-﻿namespace LemonDotNetCore.MvcApp.Models;
+﻿namespace minthukhaDotNetCore.MvcApp.Models;
 
 public class PageSettingModel
 {

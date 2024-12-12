@@ -1,12 +1,10 @@
-﻿using LemonDotNetCore.ConsoleApp.AdoDotNetExamples;
-using LemonDotNetCore.ConsoleApp.DapperPractice;
-using LemonDotNetCore.ConsoleApp.EFCoreExamples;
-using LemonDotNetCore.ConsoleApp.HttpClientExamples;
-using LemonDotNetCore.ConsoleApp.RestClientExamples;
+﻿using minthukhaDotNetCore.ConsoleApp.AdoDotNetExamples;
+using minthukhaDotNetCore.ConsoleApp.DapperPractice;
+using minthukhaDotNetCore.ConsoleApp.EFCoreExamples;
+using minthukhaDotNetCore.ConsoleApp.HttpClientExamples;
+using minthukhaDotNetCore.ConsoleApp.RestClientExamples;
 using Serilog;
 using Serilog.Sinks.MSSqlServer;
-using System.Data;
-using System.Data.SqlClient;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

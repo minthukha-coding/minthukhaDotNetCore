@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using LemonDotNetCore.RestAPI.Models;
+using minthukhaDotNetCore.RestAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace LemonDotNetCore.RestAPI.Controllers;
+namespace minthukhaDotNetCore.RestAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
